@@ -26,6 +26,9 @@ coming soon page:
 |-----------------|------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------|
 | TITLE         | Webpage head title and heading              | bootstrap4 | Coming Soon!                                                   |
 | SUBLINE       | The sentence under the title                | bootstrap4 | We're working hard to finish the development of this site. Our target launch date is &lt;strong&gt;January 2019&lt;/strong&gt;!                |
+| MAIN_COLOR  | Main color to be used in template      | bootstrap4 | #6c757d                     |
+| VIDEO_URL  | Internal or external URL to the background video      | bootstrap4 | mp4/bg.mp4                     |
+| VIDEO_SNAPSHOT_URL  | Fallback Images used instead of video on mobile     | bootstrap4 | img/bg-mobile-fallback.jpg                    |
 | FACEBOOK_URL  | Facebook URL to your page      | bootstrap4 | https://www.facebook.com/yourPage                     |
 | TWITTER_URL   | Twitter URL to your page       | bootstrap4 | https://www.twitter.com/yourPage                       |
 | GITHUB_URL    | Github URL to your page        | bootstrap4 | https://www.github.com/yourPage                         |

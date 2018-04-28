@@ -21,6 +21,15 @@
     <!-- Custom styles for this template -->
     <link href="css/coming-soon.min.css" rel="stylesheet">
 
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+      {% if MAIN_COLOR %}
+      <style type="text/css">
+        .masthead .masthead-bg {
+          background-color: {{ MAIN_COLOR }};
+        }
+      </style>
+    {% endif %}
   </head>
 
   <body>
@@ -76,8 +85,21 @@
     <!-- Plugin JavaScript -->
     <script src="vendor/vide/jquery.vide.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/coming-soon.min.js"></script>
+
+    <script type="text/javascript">
+        (function($) {
+            "use strict"; // Start of use strict
+
+            // Vide - Video Background Settings
+            $('body').vide({
+                mp4: "{{ VIDEO_URL|default('mp4/bg.mp4') }}",
+                poster: "{{ VIDEO_SNAPSHOT_URL|default('img/bg-mobile-fallback.jpg') }}"
+            }, {
+                posterType: 'jpg'
+            });
+
+        })(jQuery); // End of use strict
+    </script>
 
   </body>
 
