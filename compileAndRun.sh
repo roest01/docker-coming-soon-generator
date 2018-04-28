@@ -13,7 +13,8 @@ if [ ! -f config/config.json ]; then
     unset IFS
     config="{"
     for var in $(compgen -e); do
-        config+="\"$var\":\"${!var}\","
+        content=$(echo ${!var}|sed "s/\"/'/g") #replace " with ' to keep json valid
+        config+="\"$var\":\"$content\","
     done
     config+="\"config\":true}" #this is only to provide valid json
     echo "index parameter: $config"
