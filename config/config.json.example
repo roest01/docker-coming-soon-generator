@@ -1,0 +1,9 @@
+{
+  "TEMPLATE": "bootstrap4",
+  "TITLE": "Coming Soon!",
+  "SUBLINE": "We're working hard to finish the development of this site. Our target launch date is <strong>January 2019</strong>!",
+  "FACEBOOK_URL": "https://www.facebook.com/yourPage",
+  "TWITTER_URL": "https://www.twitter.com/yourPage",
+  "GITHUB_URL": "https://www.github.com/yourPage",
+  "BASE_DIR": "/usr/share/nginx/html"
+}
