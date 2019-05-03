@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ TITLE }}</title>
+    <title>{{ TITLE|default('Coming Soon!') }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,8 +42,8 @@
         <div class="row h-100">
           <div class="col-12 my-auto">
             <div class="masthead-content text-white py-5 py-md-0">
-              <h1 class="mb-3">{{ TITLE }}</h1>
-              <p class="mb-5">{{ SUBLINE }}</p>
+              <h1 class="mb-3">{{ TITLE|default("Coming Soon!") }}</h1>
+              <p class="mb-5">{{ SUBLINE|default("We're working hard to finish the development of this site. Our target launch date is <strong>January 2019</strong>! ")}}</p>
             </div>
           </div>
         </div>

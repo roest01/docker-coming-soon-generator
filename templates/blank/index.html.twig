@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{{ TITLE|default('Coming Soon!') }}</title>
+
+  {% if MAIN_COLOR %}
+    <style type="text/css">
+      body {
+        background-color: {{ MAIN_COLOR }};
+      }
+    </style>
+  {% endif %}
+</head>
+
+<body>
+{{ SUBLINE|default("")}}
+{{ TWITTER_URL }}
+{{ FACEBOOK_URL }}
+{{ INSTAGRAMM_URL }}
+</body>
+
+</html>

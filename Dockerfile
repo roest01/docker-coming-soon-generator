@@ -22,4 +22,6 @@ RUN ./templates/bootstrap4/checkout.sh # can i do this dynamically?
 
 ADD compileAndRun.sh /usr/local/bin/
 
+EXPOSE 443
+
 ENTRYPOINT ["compileAndRun.sh"]
