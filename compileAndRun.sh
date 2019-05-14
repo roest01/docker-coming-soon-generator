@@ -6,6 +6,9 @@ wget https://github.com/okdana/twigc/releases/download/v0.2.0/twigc.phar -O /tmp
 cd /usr/share/nginx/html
 
 mv templates/${TEMPLATE}/* ./
+
+mv ./nginx.conf /etc/nginx/conf.d/default.conf
+
 rm -R templates
 
 if [ ! -f config/config.json ]; then

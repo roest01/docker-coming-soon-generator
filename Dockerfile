@@ -15,8 +15,6 @@ ENV TEMPLATE=$defaultTemplate
 # remove nginx default content
 RUN rm /usr/share/nginx/html/*
 
-ADD config/nginx.conf /etc/nginx/conf.d/default.conf
-
 # add comming soon page
 ADD ./ $BASE_DIR
 
