@@ -16,25 +16,42 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
     <link href="css/coming-soon.min.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <style type="text/css">
+      .overlay {
+        background-color: #fff;
+      }
+    </style>
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 
       {% if MAIN_COLOR %}
       <style type="text/css">
         .masthead .masthead-bg {
           background-color: {{ MAIN_COLOR }};
+          background-size:cover;
         }
       </style>
     {% endif %}
   </head>
 
   <body>
-
     <div class="overlay"></div>
+    {% if BACKGROUND_IMAGE %}
+      <style type="text/css">
+        body {
+          background-image: url('{{ BACKGROUND_IMAGE }}');
+        }
+      </style>
+    {% else %}
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="{{ VIDEO_URL|default('mp4/bg.mp4') }}" type="video/mp4">
+    </video>
+    {% endif %}
 
     <div class="masthead">
       <div class="masthead-bg"></div>
@@ -43,7 +60,7 @@
           <div class="col-12 my-auto">
             <div class="masthead-content text-white py-5 py-md-0">
               <h1 class="mb-3">{{ TITLE|default("Coming Soon!") }}</h1>
-              <p class="mb-5">{{ SUBLINE|default("We're working hard to finish the development of this site. Our target launch date is <strong>January 2019</strong>! ")}}</p>
+              <p class="mb-5">{{ SUBLINE|default("We're working hard to finish the development of this site. Our target launch date is <strong>January 2022</strong>! ")}}</p>
             </div>
           </div>
         </div>
@@ -55,7 +72,7 @@
           {% if TWITTER_URL %}
             <li class="list-unstyled-item">
               <a href="{{ TWITTER_URL }}">
-                <i class="fa fa-twitter"></i>
+                <i class="fab fa-twitter"></i>
               </a>
             </li>
           {% endif %}
@@ -63,7 +80,7 @@
           {% if FACEBOOK_URL %}
             <li class="list-unstyled-item">
               <a href="{{ FACEBOOK_URL }}">
-                <i class="fa fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
               </a>
             </li>
           {% endif %}
@@ -71,7 +88,7 @@
           {% if INSTAGRAMM_URL %}
             <li class="list-unstyled-item">
               <a href="{{ INSTAGRAMM_URL }}">
-                <i class="fa fa-instagram"></i>
+                <i class="fab fa-instagram"></i>
               </a>
             </li>
           {% endif %}
@@ -83,24 +100,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/vide/jquery.vide.min.js"></script>
-
-
-    <script type="text/javascript">
-        (function($) {
-            "use strict"; // Start of use strict
-
-            // Vide - Video Background Settings
-            $('body').vide({
-                mp4: "{{ VIDEO_URL|default('mp4/bg.mp4') }}",
-                poster: "{{ VIDEO_SNAPSHOT_URL|default('img/bg-mobile-fallback.jpg') }}"
-            }, {
-                posterType: 'jpg'
-            });
-
-        })(jQuery); // End of use strict
-    </script>
-
+    <script src="js/coming-soon.min.js"></script>
   </body>
 
 </html>
