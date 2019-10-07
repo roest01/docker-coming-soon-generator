@@ -4,7 +4,7 @@ FROM nginx
 RUN apt-get update && apt-get install -y \
   wget \
   git \
-  php7.0-cli
+  php7.3-cli
 
 ENV BASE_DIR /usr/share/nginx/html
 WORKDIR $BASE_DIR
