@@ -13,9 +13,9 @@ rm -R templates
 
 if [ ! -f config/config.json ]; then
     echo "## write config file from env into config/config.json ##"
-    variables=("TEMPLATE" "TITLE" "SUBLINE" "FACEBOOK_URL" "TWITTER_URL" "GITHUB_URL" "BASE_DIR")
+    variables=(TEMPLATE TITLE SUBLINE FACEBOOK_URL TWITTER_URL GITHUB_URL BASE_DIR)
     config="{"
-    for var in $(variables); do
+    for var in ${variables[@]}; do
         content=$(echo ${!var}|sed "s/\"/'/g") #replace " with ' to keep json valid
         config+="\"$var\":\"$content\","
     done
