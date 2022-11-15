@@ -1,10 +1,10 @@
-FROM nginx
+FROM nginx:1.23.2
 
 # install dependencies
 RUN apt-get update && apt-get install -y \
   wget \
   git \
-  php7.3-cli
+  php7.4-cli
 
 ENV BASE_DIR /usr/share/nginx/html
 WORKDIR $BASE_DIR
