@@ -27,10 +27,10 @@
       }
     </style>
 
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
       {% if MAIN_COLOR %}
-      <style type="text/css">
+      <style>
         .masthead .masthead-bg {
           background-color: {{ MAIN_COLOR }};
           background-size:cover;
@@ -62,7 +62,7 @@
           <div class="col-12 my-auto">
             <div class="masthead-content text-white py-5 py-md-0">
               <h1 class="mb-3">{{ TITLE|default("Coming Soon!") }}</h1>
-              <p class="mb-5">{{ SUBLINE|default("We're working hard to finish the development of this site. Our target launch date is <strong>January 2022</strong>! ")}}</p>
+              <p class="mb-5">{{ SUBLINE|default("We're working hard to finish the development of this site. Our target launch date is <strong>January 2025</strong>! ")}}</p>
             </div>
           </div>
         </div>
@@ -91,6 +91,14 @@
             <li class="list-unstyled-item">
               <a href="{{ INSTAGRAMM_URL }}">
                 <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if GITHUB_URL %}
+            <li class="list-unstyled-item">
+              <a href="{{ GITHUB_URL }}">
+                <i class="fab fa-github"></i>
               </a>
             </li>
           {% endif %}
