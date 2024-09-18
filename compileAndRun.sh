@@ -13,9 +13,9 @@ rm -R templates
 
 if [ ! -f config/config.json ]; then
     echo "## write config file from env into config/config.json ##"
-    unset IFS
+    variables=(TEMPLATE TITLE SUBLINE FACEBOOK_URL TWITTER_URL GITHUB_URL BASE_DIR)
     config="{"
-    for var in $(compgen -e); do
+    for var in ${variables[@]}; do
         content=$(echo ${!var}|sed "s/\"/'/g") #replace " with ' to keep json valid
         config+="\"$var\":\"$content\","
     done
@@ -28,6 +28,7 @@ fi
 
 echo '### Compile index.html file ... ###'
 twig "index.html.twig" -j config/config.json > index.html
+rm -rf config
 
 echo "#### Starting Nginx ... ####"
 nginx -g "daemon off;"
