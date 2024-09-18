@@ -13,10 +13,11 @@ Here is an example of the result:
 Please set environment variable `TEMPLATE` to pick one of these avaliable templates.
 If you don't pick a template, `bootstrap4` is default
 
-| Template | Preview | Description |
-| -------- | ------- | ------- |
+| Template   | Preview                                                                                                                                | Description |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------| ------- |
 | bootstrap4 | <img src="https://raw.githubusercontent.com/roest01/docker-coming-soon-generator/master/templates/bootstrap4/example.png" width="250"> |  | 
-| blank | | output variables one by one |
+| bootstrap5 | <img src="https://raw.githubusercontent.com/roest01/docker-coming-soon-generator/master/templates/bootstrap5/example.png" width="250"> |  | 
+| blank      |                                                                                                                                        | output variables one by one |
 
 You have the following environment variables which allow you to configure the
 coming soon page:
@@ -24,15 +25,15 @@ coming soon page:
 
 
 | Variable name | Description                            | used in Templates | Example                                                                |
-|-----------------|------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------|
-| TITLE         | Webpage head title and heading              | bootstrap4, blank | Coming Soon!                                                   |
-| SUBLINE       | The sentence under the title                | bootstrap4, blank | We're working hard to finish the development of this site. Our target launch date is &lt;strong&gt;January 2019&lt;/strong&gt;!                |
-| MAIN_COLOR  | Main color to be used in template      | bootstrap4, blank | #6c757d                     |
-| VIDEO_URL  | Internal or external URL to the background video      | bootstrap4, blank | mp4/bg.mp4                     |
-| BACKGROUND_IMAGE  | Image to use as body background     | bootstrap4, blank | none                    |
-| FACEBOOK_URL  | Facebook URL to your page      | bootstrap4, blank | https://www.facebook.com/yourPage                     |
-| TWITTER_URL   | Twitter URL to your page       | bootstrap4, blank | https://www.twitter.com/yourPage                       |
-| GITHUB_URL    | Github URL to your page        | bootstrap4, blank | https://www.github.com/yourPage                         |
+|-----------------|------------------------------------------- |------------------| ---------------------------------------------------------------------------------|
+| TITLE         | Webpage head title and heading              | bootstrap4/5, blank | Coming Soon!                                                   |
+| SUBLINE       | The sentence under the title                | bootstrap4/5, blank | We're working hard to finish the development of this site. Our target launch date is &lt;strong&gt;January 2019&lt;/strong&gt;!                |
+| MAIN_COLOR  | Main color to be used in template      | bootstrap4/5, blank | #6c757d                     |
+| VIDEO_URL  | Internal or external URL to the background video      | bootstrap5, blank | mp4/bg.mp4                     |
+| BACKGROUND_IMAGE  | Image to use as body background     | bootstrap4/5, blank | none                    |
+| FACEBOOK_URL  | Facebook URL to your page      | bootstrap4/5, blank | https://www.facebook.com/yourPage                     |
+| TWITTER_URL   | Twitter URL to your page       | bootstrap4/5, blank | https://www.twitter.com/yourPage                       |
+| GITHUB_URL    | Github URL to your page        | bootstrap4/5, blank | https://www.github.com/yourPage                         |
 HTML is allowed !
 
 ## what happen at Build ?
@@ -45,7 +46,7 @@ HTML is allowed !
 
 ## FAQ
 
-##### How to change Video in `bootstrap4` template?
+##### How to change Video in `bootstrap4`/`bootstrap5` template?
 Important: only mp4 possible ! Many ways to rome:
 
 1. mount volume into `/usr/share/nginx/html/mp4` and put `bg.mp4` into folder.
