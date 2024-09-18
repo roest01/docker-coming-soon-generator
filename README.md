@@ -36,6 +36,17 @@ coming soon page:
 | GITHUB_URL    | Github URL to your page        | bootstrap4/5, blank | https://www.github.com/yourPage                         |
 HTML is allowed !
 
+## docker
+```
+docker run -d \
+  --name website \
+  -e TEMPLATE=bootstrap5 \
+  -e TITLE="Your custom <h4>TITLE</h4>" \
+  -e SUBLINE="01234 / 5678910<br />mail@example.com <br /><br />Company: example <br />Your Name <br />Your Adress. 00 <br />00000 Country" \
+  roest/docker-coming-soon-generator
+```
+
+
 ## what happen at Build ?
 1. Checkout missing templates with `checkout.sh` script into `templates`
 2. move template (name stored in env) `TEMPLATE` to root
