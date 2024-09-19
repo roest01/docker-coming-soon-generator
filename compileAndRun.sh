@@ -29,6 +29,7 @@ fi
 echo '### Compile index.html file ... ###'
 twig "index.html.twig" -j config/config.json > index.html
 rm -rf config
+rm -rf .git
 
 echo "#### Starting Nginx ... ####"
 nginx -g "daemon off;"
